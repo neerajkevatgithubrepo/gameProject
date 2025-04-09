@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>time pass game </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body id="game-area">
+        <div id="user-input">
+            <div >
+                <img id="logo" src="logo-pic.jpg" alt="">
+                <h3 id="author">Game author : Krishna Bharat</h3>
+            </div>
+            <h1 id="game-hedding">tik toc toe game </h1>
+            <input type="text" id="user1" placeholder="Enter name player one" required><br>
+            <input type="text" id="user2" placeholder="Enter name player two" required><br>
+            <input type="submit" id="strGame-btn" class="btn" value="Start Now">
+        </div>
+        <div id="game">
+            <h1 id="game-hedding">tik toc toe game </h1>
+            <h2 id="player" class="animation"></h2>
+           <div id="main-container">
+                <div id="game-element">
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    <button class="element"></button>
+                    
+                    <button type="reset" id="reset-btn" class="btn">Reset Game</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="winner">
+            <h2 id="winner-player">winner</h2>
+            <video id="logo" width="320" height="240"  autoplay="autoplay" loop="loop">
+                <source src="winnerLogo.mp4" type="video/mp4">
+              </video>
+              <button class="btn newGame-btn">Start a new Game</button>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  
+}
+#user-input #logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 5%;
+    object-position: center;
+    object-fit: cover;
+}
+#author{
+    color: #fff;
+}
+#user-input{
+    margin: 10px auto;
+    border: dotted red 5px;
+    background-color: darkgrey;
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#user-input input{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: x-large;
+    text-transform: capitalize;
+    border: none;
+   
+}
+
+#user-input h1{
+    font-size: 50px;
+    color: aqua;
+}
+
+.btn{
+    margin: 10px;
+    padding: 5px;
+    color: aliceblue;
+    background-color: forestgreen;
+    cursor: pointer;
+    font-size: 20px;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#game{
+    display:none;
+}
+#player{
+    color: rgb(249, 249, 249);
+    font-size: 30px;
+    background-color: rgb(13, 13, 13);
+   text-transform: capitalize;
+   margin: 2%;
+}
+
+#main-container{
+            
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+}
+               
+#game-element{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 5px; /* Adjusted gap between elements for mobile */
+    width: 300px;
+}
+
+
+.element{ 
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: aquamarine;
+    cursor: pointer;
+    color: black;
+
+}
+
+
+#winner{
+   margin: 10% auto;
+   border-radius: 15px;
+   width: 500px;
+   background-color: white;
+   transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    scale: 0;
+}
+
+#winner #winner-player{
+    color: rgb(98, 0, 255);
+    font-size: 40px;
+}
+
+.animation{
+    animation-name: playerAnimation;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+}
+@keyframes playerAnimation {
+    0%{
+        color: red;
+        scale: 0; 
+    }
+
+    100%{
+        color: rgb(5, 244, 89);
+        scale: 1;
+    }
+  }
+
+
+/* mobile view desing */
+
+@media only screen and (max-width: 600px) {
+    /* Adjustments for mobile devices */
+    #game-element {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 5px; /* Adjusted gap between elements for mobile */
+         width: 200px;
+    }
+   
+    .element {
+        height: 80px; /* Adjusted height for mobile */
+        width: 80px; /* Adjusted width for mobile */
+        font-size: 30px; /* Adjusted font size for mobile */
+    }
+}
